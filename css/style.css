@@ -1,0 +1,994 @@
+@font-face{ /*CosiTimesRoman typeface*/
+    font-family: CosiTimesRoman; 
+    src: url(../fonts/CosiTimes-Roman.ttf);
+} 
+
+
+@font-face{ /*Didot Regular typeface*/
+    font-family: DidotRegular; 
+    src: url(../fonts/Didot-Regular.ttf);
+}
+
+html{
+    overflow-x: hidden; /*ginawa kong overflow lang at dapat overflow-x yarn*/
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #080808;
+    user-select: none;
+}
+
+.ftco-navbar-light{
+    background: transparent !important;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 0;
+}
+
+.ftco-navbar-light .navbar-brand{
+    color: #fff;
+    font-family: CosiTimesRoman;
+}
+
+.ftco-navbar-light .navbar-brand:hover,
+.ftco-navbar-light .navbar-brand:focus{
+    columns: #fff;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link{
+    font-size: 14px;
+    padding-top: .8rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: "Century Gothic";
+    opacity: 1 !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a{
+    background: #F7C953; /*Border color*/
+    color: #fff;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+#ords:hover{
+    color: #000;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.active > a{
+    color: #F7C953; /*Home color*/
+
+}
+
+/*This bellow written code will work when the page content goes more than
+screen size when it scrolled
+parang parallax scrolling ata 'to hahahhahha*/
+
+.ftco-navbar-light.scrolled .nav-item.active > a{
+    color: #F7C953 !important;
+}
+
+.ftco-navbar-light.scrolled .nav-item.cta > a{
+    color: #fff !important;
+    background: #F7C953;
+    border: none !important;
+    border-radius: 0;
+}
+
+.ftco-navbar-light.scrolled .nav-item.cta > a span{
+    display: inline-block;
+    color: #fff Im !important;
+}
+
+.ftco-navbar-light.scrolled .nav-item.cta.cta-colored span{
+    border-color: #F7C953;
+}
+
+.ftco-navbar-light.scrolled .nav-link{
+    padding-top: 0.7rem !important;
+    padding-bottom:  .7rem I !important;
+    color: #000 !important;
+}
+
+.ftco-navbar-light.scrolled .nav-link.active{
+    color: #F7C953 !important;
+}
+
+.ftco-navbar-light.scrolled.awake{ /*main.js line 49 yung awake*/
+    margin-top: 0px;
+    transition: 0.3s all ease-in-out;
+}
+
+.ftco-navbar-light.scrolled.sleep{ /*main.js line 44 ata siya yung sa scrolled sleep*/
+    transition:  0.3s all ease-in-out;
+}
+
+.ftco-navbar-light.scrolled .navbar-brand{
+    color: #000;
+}
+
+.navbar-brand{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/*Slider section owl carousel start*/
+.owl-carousel{
+    position: relative;
+}
+
+.owl-carousel .owl-item{
+    opacity: 0.4;
+}
+
+.owl-carousel .owl-item.active{
+    opacity: 1;
+}
+
+.owl-carousel .owl-nav{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.owl-carousel .owl-nav .owl-prev, /*prev and next pointer*/
+.owl-carousel .owl-nav .owl-next{
+    position: absolute;
+    transform: translateY(-50%);
+    margin-top: -10px;
+    color: #F7C953 !important;
+    transition: all 0.7s ease;
+    opacity: 0;
+}
+
+.owl-carousel .owl-nav .owl-prev span::before, /*prev and next pointer size*/
+.owl-carousel .owl-nav .owl-next span::before{
+    font-size: 30px;
+}
+
+.owl-carousel .owl-nav .owl-prev{ /*prev and next pointer loc*/
+    left: 0;
+}
+
+.owl-carousel .owl-nav .owl-next{ /*prev and next pointer loc*/
+    right: 0;
+}
+
+.owl-carousel:hover .owl-nav .owl-prev,
+.owl-carousel:hover .owl-nav .owl-next{
+    opacity: 1;
+}
+
+.owl-carousel:hover .owl-nav .owl-prev{
+    left: -25px;
+}
+
+.owl-carousel:hover .owl-nav .owl-next{ 
+    right: -25px;
+}
+
+.owl-carousel.home-slider{
+    position: relative;
+    height: 750px;
+    z-index: 0;
+}
+
+.owl-carousel.home-slider .slider-item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 750px;
+    position: relative;
+    z-index: 0;
+}
+
+.owl-carousel.home-slider .slider-item .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.7; /*darkness*/
+}
+
+.owl-carousel.home-slider .slider-item .slider-text{ /*Yung frontpage CSB someting*/
+    color: #fff;
+    height: 750px;
+    text-align: right;
+}
+
+.owl-carousel.home-slider .slider-item .slider-text .subheading{
+    font-size: 80px;
+    color: #F7C953;
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 1;
+    font-family: "CosiTimesRoman";
+}
+
+.subheadings{
+    font-size: 100px;
+    color: #F7C953;
+
+    font-family: "CosiTimesRoman";
+}
+
+.owl-carousel.home-slider .slider-item .slider-text h1{ /*Sa baba ng CSB text doon sa frontpage*/
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-family: "DidotRegular";
+}
+
+.owl-carousel.home-slider .owl-nav .owl-prev span,
+.owl-carousel.home-slider .owl-nav .owl-next span{
+    color: #fff;
+}
+
+.owl-carousel.home-slider:hover .owl-nav .owl-prev span,
+.owl-carousel.home-slider:hover .owl-nav .owl-next span{
+   opacity: 1;
+}
+
+.owl-carousel.home-slider:hover .owl-nav .owl-prev{
+    left: 20px;
+}
+
+.owl-carousel.home-slider:hover .owl-nav .owl-next{
+    right: 20px
+}
+
+.owl-custom-nav{
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+
+.owl-custom-nav .owl-custom-prev,
+.owl-custom-nav .owl-custom-next{
+    padding: 10px;
+    font-size: 30px;
+    background: #ccc;
+    line-height: 0;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+}
+/*Slider section owl carousel end*/
+
+/*Featured products start*/
+.featured{ /*yung sa mga small circle images */
+    padding-top: 30px;
+    width: 100%;
+    margin-top: -230px;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.featured .featured-menus{
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3 ease;
+}
+
+.featured .featured-menus .text{
+    width: 100%;
+}
+
+.featured .featured-menus .text h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Century Gothic";
+}
+
+.featured .featured-menus .text p{
+    font-size: 14px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, .781);
+}
+
+.featured .featured-menus .menu-img{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/*Featured products end*/
+
+/*About us section start*/
+.ftco-wrap-about{
+    background-position: bottom center !important;
+}
+
+.ftco-wrap-about .heading-section h2{
+    font-weight: 600 !important;
+}
+
+.ftco-wrap-about .img{
+    width: 100%;
+}
+
+.intro{
+    width: 100%;
+    background: #080808;
+    padding-top: 102px;
+    padding-bottom: 0px;
+}
+
+.intro_image{
+    width: 100%;
+}
+
+.intro_image img{
+    max-width: 100%;
+}
+
+.intro_content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -165px;
+    width: 679px;
+    background: #080808;
+    border: solid 2px #F7C953;
+    box-shadow: 0px 45px 70px rgba(0, 0, 0, .24);
+    z-index: 1;
+    padding-top: 55px;
+    padding-bottom: 59px;
+    padding-left: 70px;
+    padding-right: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.intro_subtitle{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: Didot;
+    color: #fff;
+}
+
+.intro_title{
+    margin-top: 6px;
+    font-family: CosiTimesRoman;
+    color: #F7C953;
+}
+
+.intro_title h2{
+    font-size: 40px;
+}
+
+.intro_text{
+    margin-top: 32px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.row{ /*yung mga years of exp diff reco etc. OPTIONAL*/
+    color: #fff;
+}
+
+.ftco-animate{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#section-counter{
+    position: relative;
+    margin-top: 50px;
+    z-index: -1;
+}
+
+#section-counter::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    z-index: 1;
+    opacity: 0; 
+    background: #000; 
+}
+
+.ftco-counter{
+    padding-bottom: 1em;
+    background-position: center center !important;
+}
+
+.ftco-counter .block-18{
+    display: block;
+    width: 100%;
+}
+
+.ftco-counter .text strong.number{
+    font-weight: 600;
+    font-size: 44px;
+    color: #F7C953;
+    display: block;
+    line-height: 1;
+}
+
+.ftco-counter .text span{
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.ftco-counter p{
+    line-height: 1.8;
+    font-size: 18px;
+}
+/*About us section end*/
+
+/*gallery section start*/
+.ftco-section{
+    margin-bottom: 70px;
+    /*
+    Yung sa tutorial which isn't good for my project
+    padding: 7em 0;
+    position: relative;
+    */
+}
+
+.gallery__pic img{
+    max-width: 100%;
+}
+
+.bg-light{
+    background: #080808 !important;
+    padding-top: 5.625em;
+    margin-top: 100px;
+}
+
+.heading-section{
+    position: relative;
+}
+
+.heading-section .subheading{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -80px;
+    font-weight: normal;
+    font-size: 100px;
+    display: block;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    color: #F7C953;
+    line-height: 1;
+    text-align: center;
+    margin-top: 0;
+    z-index: -1;
+    font-family: CosiTimesRoman;
+}
+
+.heading-section h2{
+    position: relative;
+    font-size: 50px;
+    top: 25px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Didot Regular;
+}
+#rowds{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+/*gallery section end*/
+
+/*menu section start*/
+#menu{
+    padding-top: 10em;
+    background-color: #080808; /*main color menu*/
+}
+
+#rowsec{
+    margin-top: 89px;
+}
+
+.menu-wrap{
+    margin-bottom: 30px;
+    top: -30px;
+}
+#spemenu{
+    position: absolute Im !important;
+    top: -30px;
+}
+
+.heading-menu h3{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 1em;
+    font-family: CosiTimesRoman;
+}
+
+.menus{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #F7C953;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.menus .text{
+    width: calc(100% -100px);
+    padding-left: 20px;
+}
+
+.menus .text .one-half{
+    width: calc(100% - 80px);
+}
+
+.menus .text .one-half h3{
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Didot Regular;
+    text-transform: uppercase;
+}
+
+.menus .text .one-forth{
+    width: 80px;
+    text-align: right;
+}
+
+.menus .text .one-forth .price{
+    position: absolute;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.3;
+    right: 5%;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid #F7C953;
+}
+
+.menus .text p{
+    margin-bottom: 0;
+    color: #fff;
+    font-family: "Century Gothic";
+}
+
+.menus .menu-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.menus:hover{
+    border: 1px solid #F7C953;
+    background: linear-gradient(235deg, #E6AA4E 30%, 
+    #ECC55E 67%);
+    
+}
+/*menu section end*/
+
+/*testimonial section start*/
+.testimony-section {
+    position: relative;
+    z-index: 0;
+    background-position: center center !important;
+    background-attachment: fixed;
+  }
+  
+  .testimony-section .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+  }
+  
+  .testimony-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: #000;
+    opacity: 0.7;
+  }
+  .testimony-section .owl-carousel {
+    margin: 0;
+  }
+  
+  .testimony-section .owl-carousel .owl-stage-outer {
+    padding: 1.5em 0 2em 0;
+    position: relative;
+  }
+  .testimony-section .owl-nav {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+  
+  .testimony-section .owl-nav .owl-prev,
+  .testimony-section .owl-nav .owl-next {
+    position: absolute;
+    transform: translateY(-50%);
+    margin-top: -10px;
+    outline: none !important;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .testimony-section .owl-nav .owl-prev span::before,
+  .testimony-section .owl-nav .owl-next span::before {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .testimony-section .owl-nav .owl-prev:hover span::before,
+  .testimony-section .owl-nav .owl-prev:focus span::before,
+  .testimony-section .owl-nav .owl-next:hover span::before,
+  .testimony-section .owl-nav .owl-next:focus span::before {
+    color: #fff;
+  }
+  .testimony-section .owl-nav .owl-prev {
+    left: 50%;
+    margin-left: -80px;
+  }
+  .testimony-section .owl-nav .owl-next {
+    right: 50%;
+    margin-right: -80px;
+  }
+
+  
+  .testimony-section .owl-dots {
+    text-align: center;
+  }
+  
+  .testimony-section .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.253);
+  }
+  
+  .testimony-section .owl-dots .owl-dot.active {
+    background: #F7C953;
+  }
+  
+  .testimony-wrap {
+    display: block;
+    position: relative;
+    border: 1px solid #F7C953;
+    padding: 0 20px;
+    max-width: 1140px;
+    width: 80%;
+    left: 10%;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 30px 33px -41px rgba(0, 0, 0, 0.24);
+  }
+  .testimony-wrap .text p {
+    font-style: italic;
+    font-family: "Century Gothic";
+  }
+  
+  .testimony-wrap .icon {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  
+  .testimony-wrap .icon span {
+    color: #F7C953;
+  }
+  
+  .testimony-wrap .user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .img, .user-img { /*for user etc.*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+  .testimony-wrap .name {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: #fff;
+    font-style: normal !important;
+    font-family: CosiTimesRoman;
+  }
+  
+  .testimony-wrap .price {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+#testimonial{
+    padding: 9em 0;
+    position: relative;
+}
+/*testimonial section end*/
+
+/*Order section start*/
+.form-control::-webkit-outer-spin-button, /*para mawala yung arrows sa number type input*/
+.form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.makereservation{
+    width: 100%;
+    border: 2px solid #F7C953;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgba(8, 8, 8, .5);
+}
+
+.makereservation .form-group label{
+    font-weight: 600;
+    color: #fff;
+}
+
+.makereservation .form-group .icon{
+    position: absolute;
+    top: 50% I !important;
+    right: 20px;
+    font-size: 14px;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.makereservation .form-group .select-wrap{
+    position: relative;
+}
+
+.makereservation .form-group .select-wrap select{
+    appearance: none;
+}
+
+.btn{
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus{
+    outline: none;
+}
+
+.btn.btn-primary{
+    background: #F7C953;
+    border: 1px solid #F7C953;
+    color: #fff;
+}
+
+.btn.btn-primary:hover{
+    background: #fff;
+    border: 1px solid #F7C953;
+    color: #F7C953;
+}
+
+.btn.btn-primary.btn-outline-primary{
+    border: 1px solid #F7C953;
+    background: transparent;
+    color: #F7C953;
+}
+
+.btn.btn-primary.btn-outline-primary:hover{
+    border: 1px solid transparent;
+    background: #F7C953;
+    color: #fff;
+}
+
+#order{
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+/*Order section end*/
+
+/*Footer section start*/
+.ftco-heading-2{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.provider{
+    font-family: "Century Gothic";
+    font-size: 14px;
+}
+
+.PPT{
+    color: #F7C953;
+}
+
+.PPT:hover{
+    color: #F7C953;
+}
+
+.custc{
+    list-style-type: none; /* Remove bullets */
+}
+
+.custc a{
+    color: #F7C953;
+    list-style: none;
+}
+
+
+.ftco-bg-dark {
+    background: #080808;
+  }
+  
+  .ftco-footer {
+    font-size: 14px;
+    background: #080808;
+    padding: 50px 0 10px 0px;
+  }
+  .ftco-footer .ftco-footer-logo {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .ftco-footer .ftco-footer-widget h2 {
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .ftco-footer .ftco-footer-widget ul li a span {
+    color: #ffffff;
+  }
+  .ftco-footer .ftco-footer-widget .open-hours li span {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .ftco-footer .ftco-footer-widget .thumb a.thumb-menu {
+    width: 100%;
+    height: 100px;
+    display: block;
+  }
+  
+  .ftco-footer p {
+    color: #fff;
+  }
+  
+  .ftco-footer a:hover {
+    color: #ffffff;
+  }
+  
+  .ftco-footer .ftco-heading-2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .ftco-footer .categories li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ftco-footer .categories li a span {
+    color: #fff !important;
+  }
+  
+  .ftco-footer .subscribe-form .form-group {
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  .ftco-footer .subscribe-form .form-group input {
+    border-radius: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none;
+    color: #fff !important;
+    font-size: 16px;
+  }
+  
+  .ftco-footer .subscribe-form .form-group .submit {
+    color: #ffffff !important;
+    font-size: 16px;
+    background: #F7C953 !important;
+    border: none !important;
+    border-radius: 2px;
+  }
+  
+  .ftco-footer .subscribe-form .form-group .submit:hover {
+    cursor: pointer;
+  }
+  
+  .ftco-footer .subscribe-form .icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .ftco-footer-social li {
+    list-style: none;
+    margin: 0 10px 0 0;
+    display: inline-block;
+  }
+  .ftco-footer-social li a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    float: left;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .ftco-footer-social li a:hover {
+    background: #F7C953;
+  }
+  
+  .ftco-footer-social li a span {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .ftco-footer-social li .fa:hover {
+    color: #000000;
+  }
+/*Footer section end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
